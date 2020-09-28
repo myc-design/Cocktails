@@ -1,0 +1,15 @@
+Create a cocktail
+
+Name
+
+Ingredients
+Method
+User Rating
+
+
+Name
+
+Ingredients
+Method
+User Rating
+
