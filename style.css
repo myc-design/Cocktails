@@ -1,5 +1,7 @@
 body {
   font-family: "Courier New", Courier, monospace;
+  margin: 20px;
+  padding: 20px;
 }
 
 h1 {
@@ -34,18 +36,19 @@ a {
 
 .cocktail-wrapper {
   display: grid;
-
   grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
-  grid-gap: 20px;
+  grid-gap: 30px;
   border: 1px solid lightpink;
 }
 
-.image {
-  width: 400px;
+/* .image {
+  display: block;
+  width: 100%;
   height: 400px;
   background-color: lightgray;
-  /* display: none; */
-}
+  display: none;
+} */
+
 p.ingredients {
   font-weight: bolder;
 }

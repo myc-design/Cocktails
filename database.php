@@ -16,12 +16,14 @@ $result = $query->fetchAll();
 
 <section class="grid">
     <div class="cocktail-wrapper">
+
         <?php 
+        
             foreach($result as $cocktail){
             echo '<div class="' . 'image-' .$cocktail['id'] . '">';
-            echo '<div class="' . 'image' . '"></div>' ;
-        
-            // echo '<div class="' . $cocktail['id'] . '"'; 
+
+            echo file_get_contents($cocktail['imagesUrl']) ;    
+            echo '<div class="' . 'image' . '"></div>';
             echo '<h2>' . $cocktail['name'] . '</h2>';
             echo '<p class="ingredients">' . $cocktail['ingredients'] . '</p>';
             echo '<p class="method">' . $cocktail['method'] . '</p>';
@@ -33,3 +35,4 @@ $result = $query->fetchAll();
 
 
 </section>
+
