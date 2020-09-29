@@ -30,6 +30,18 @@ a {
   text-decoration: none;
   padding: 50px;
 }
+
+.cocktail-wrapper {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
+  grid-gap: 20px;
+  border: 1px solid lightpink;
+}
+
+p.ingredients {
+  font-weight: bolder;
+}
 .form-wrapper {
   display: flex;
   justify-content: center;
@@ -37,7 +49,7 @@ a {
   max-width: 400px;
   height: 300px;
   margin: 0 auto;
-  background-color: tomato;
+  background-color: gold;
 }
 form {
   display: flex;
