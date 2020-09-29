@@ -24,6 +24,7 @@ nav {
   height: 30px;
   font-weight: bold;
 }
+
 a {
   color: white;
   font-size: 1.2rem;
@@ -39,6 +40,12 @@ a {
   border: 1px solid lightpink;
 }
 
+.image {
+  width: 400px;
+  height: 400px;
+  background-color: lightgray;
+  /* display: none; */
+}
 p.ingredients {
   font-weight: bolder;
 }
