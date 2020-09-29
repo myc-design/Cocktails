@@ -1,12 +1,12 @@
 body {
   font-family: "Courier New", Courier, monospace;
   margin: 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
 h1 {
   font-family: "Pacifico", cursive;
-  font-size: 6rem;
+  font-size: 5rem;
   transform: rotate(-5deg);
   text-align: center;
 }
@@ -15,12 +15,14 @@ h3 {
   font-family: "Pacifico", cursive;
   font-size: 2rem;
   text-align: center;
+  color: tomato;
 }
 
 nav {
   display: flex;
-  justify-content: center;
-  background-color: hotpink;
+
+  justify-content: space-around;
+  background-color: tomato;
   padding-top: 18px;
   /* margin-top: 5px; */
   height: 30px;
@@ -31,7 +33,7 @@ a {
   color: white;
   font-size: 1.2rem;
   text-decoration: none;
-  padding: 50px;
+  /* padding: 40px; */
 }
 
 .cocktail-wrapper {
@@ -39,8 +41,13 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
   grid-gap: 30px;
   border: 1px solid lightpink;
+  text-align: center;
 }
 
+svg {
+  width: 100%;
+  /* height: 30%; */
+}
 /* .image {
   display: block;
   width: 100%;
@@ -81,11 +88,12 @@ input[type="submit"] {
   margin-top: 20px;
   padding: 5px;
   border-radius: 20px;
-  width: 100px;
+  width: 150px;
   height: 50px;
   color: white;
-  justify-items: center;
-  align-items: center;
+  align-self: center;
+  /* justify-items: center;
+  align-items: center; */
 }
 
 footer {

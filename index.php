@@ -17,7 +17,7 @@
 
     <body>
       
-         <nav class="cocktail-wrapper">
+         <nav>
                 <div class="home"><a href="">Home</a></div>
                 <div class="add"><a href="">Add A Cocktail</a></div>
                 <div class="search"><a href="">Search</a></div>
