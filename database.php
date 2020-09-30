@@ -29,8 +29,7 @@ $query->execute();
 $result = $query->fetchAll(); 
 return $result;
 }
-
- $result = prepareQuery($db, $get);
+$result = prepareQuery($db, $get);
 
 ?>
 
@@ -41,7 +40,6 @@ return $result;
              foreach($result as $cocktail){
                 echo '<div class="' . 'image image-' .$cocktail['id'] . '">';
                 echo file_get_contents($cocktail['imagesUrl']) ;    
-               
                 echo '<h2>' . $cocktail['name'] . '</h2>';
                 echo '<p class="ingredients">' . $cocktail['ingredients'] . '</p>';
                 echo '<p class="method">' . $cocktail['method'] . '</p>';
