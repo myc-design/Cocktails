@@ -1,43 +1,62 @@
  
  
 <section> 
+<!-- <h3>Add Your Favourite Cocktail</h3> -->
+  <div class="form-wrapper">
+    <form action="cocktail.php" method="POST">
+       <fieldset>
+         <legend>Add Your Favourite Cocktail</legend>
 
-
-<h3>Add Your Favourite Cocktail</h3>
-<div class="form-wrapper">
-<form action="index.php" method="POST">
-    <div class="name-input">
+      <div class="choose">
         <label>Give your cocktail a name: </label>
-        <input type="text" name="name">
-    </div>
-    <div class="alcohol-input">
-         <label for="ingredients">Add your favourite ingredients</label>
-        <label>Choose your alcohol mix: </label>
-        <input type="text" name="alcohol">
-          <select name="fruit" id="fruit">
-    <option value="pineapple">Pineapple</option>
-    <option value="cherry">Cherry</option>
-    <option value="lemon">Lemon</option>
-    <option value="rasberry">Rasberry</option>
-    <input type="submit" name="submit">
-  </select>
-    </div>
+        <input class="input-name" type="text" name="name">
 
+        <label class="fruit">Choose favourite alcohol: </label>
+            <select name="alcohol" id="alcohol">
+              <option value="rum">Rum</option>
+              <option value="vodka">Vodka</option>
+              <option value="gin">Gin</option>
+              <option value="whiskey">Whiskey</option>
+            </select>
 
-    
+        <label class="fruit">Choose favourite fruit: </label>
+            <select name="fruit" id="fruit">
+              <option value="pineapple">Pineapple</option>
+              <option value="cherry">Cherry</option>
+              <option value="lemon">Lemon</option>
+              <option value="rasberry">Rasberry</option>
+            </select>
 
+        <label class="mixer">Add your favourite mixer: </label>
+            <select name="mixer" id="mixer">
+              <option value="soda water">Soda Water</option>
+              <option value="ice">Ice</option>
+              <option value="lemonade">Lemonade</option>
+              <option value="Lime Juice">Lime Juice</option>
+              <option value="Cranberry">Cranberry</option>
+              </select>
 
- <label for="ingredients">Add your favourite ingredients</label>
-    <select name="fruit" id="fruit">
-    <option value="pineapple">Pineapple</option>
-    <option value="cherry">Cherry</option>
-    <option value="lemon">Lemon</option>
-    <option value="rasberry">Rasberry</option>
-    <input type="submit" name="submit">
-  </select>
-
-
-</form>
-</div>
-
+        <label class="mixer">How would you like your cocktail: </label>
+          <div id="method" class="radio-button">
+              <label for="method">
+				      <input type="radio" id="method" name="method">Shaken not stirred</label>
+						  <label for="On the Rocks">
+							<input type="radio" id="On the Rocks" name="method">On the Rocks</label>
+						  <label for="With a Straw">
+							<input type="radio" id="With a Straw" name="method">With a Straw</label>
+          </div>
+            <!-- <select name="method" id="method">
+              <option value="shaken">Shaken not stirred</option>
+              <option value="straw">With a straw</option>
+              <option value="ice">With crushed ice</option>
+              <option value="glass">In a tall glass</option>
+              <option value="umbrella">Cranberry</option>
+            </select> -->
+              <input type="submit" name="submit" value="add your cocktail">
+        </div>
+       </fieldset>
+    </form>
+  </div>
 </section>
+
+
