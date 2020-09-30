@@ -8,12 +8,12 @@
  */
 
 function connectDataBase (){
-$db = new PDO('mysql:host=db; dbname=cocktails', 'root', 'password');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-return $db;
+    $db = new PDO('mysql:host=db; dbname=cocktails', 'root', 'password');
+    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    return $db;
 }
 
-$db = connectDataBase();
+$connect = connectDataBase();
 
 $get = "SELECT * FROM `cocktails`";
 
@@ -23,13 +23,14 @@ $get = "SELECT * FROM `cocktails`";
  * @return array
  */
 
-function prepareQuery($db, $get){
-$query = $db->prepare($get);
-$query->execute();
-$result = $query->fetchAll(); 
-return $result;
+function prepareQuery($connect, $get){
+    $query = $connect->prepare($get);
+    $query->execute();
+    $result = $query->fetchAll(); 
+    return $result;
 }
-$result = prepareQuery($db, $get);
+
+$result = prepareQuery($connect, $get);
 
 ?>
 

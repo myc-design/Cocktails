@@ -22,14 +22,10 @@ h3 {
   color: black;
 }
 
-p.method {
-  /* line-height: 1.6; */
-}
 nav {
   display: flex;
   justify-content: space-around;
   top: 0;
-  /* background-image: linear-gradient(rgb(255, 195, 204), ivory); */
   padding-top: 18px;
   height: 60px;
   font-weight: bold;
@@ -51,12 +47,11 @@ a:after {
   left: 50%;
   position: absolute;
   background: gold;
-  /* background-image: linear-gradient(rgb(255, 255, 255), lightpink); */
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
   z-index: -1;
-  /* border-radius: 5px; */
 }
+
 a:hover:after {
   width: 100%;
   left: 0%;
@@ -68,16 +63,17 @@ a:hover:after {
   grid-gap: 30px;
   text-align: center;
 }
+
 .header-rating {
   font-weight: bolder;
   font-size: 1.1rem;
   margin-top: 20px;
 }
+
 .rating {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  /* background-color: rgba(6, 82, 105, 0.6); */
   background-color: rgba(255, 255, 240, 0.6);
   color: black;
   font-size: 1.5rem;
@@ -100,11 +96,6 @@ a:hover:after {
   justify-self: start;
 }
 
-svg {
-  width: 100%;
-  /* background-color: gold; */
-}
-
 .image {
   padding: 40px;
   background-image: linear-gradient(rgb(255, 255, 255), lightpink);
@@ -114,83 +105,6 @@ svg {
   align-items: center;
 }
 
-.image-1 {
-  /* display: block;
-  /* display: none; */
-  /* background-color: ivory; */
-}
-.image-2 {
-  /* display: block;
-  /* display: none; */
-  /* background-color: ivory; */
-  /* background-image: linear-gradient(ivory, rgb(253, 107, 129)); */
-}
-.image-3 {
-  /* display: block;
-  /* display: none; */
-  /* background-color: ivory; */
-  /* background-image: linear-gradient(ivory, rgb(253, 41, 154)); */
-}
-.image-4 {
-  /* display: block;
-  /* display: none; */
-  /* background-color: ivory; */
-  /* background-image: linear-gradient(ivory, lightpink); */
-}
-.image-5 {
-  /* display: block;
-  /* display: none; */
-  /* background-color: ivory; */
-}
-.image-6 {
-  /* display: block;
-  /* display: none; */
-  /* background-color: ivory; */
-}
-
 p.ingredients {
   font-weight: bolder;
-}
-
-/* .form-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 400px;
-  height: 300px;
-  margin: 0 auto;
-  background-color: black;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  justify-content: start;
-}
-
-label,
-input {
-  padding: 6px;
-  border: none;
-  border-radius: 5px;
-}
-
-input {
-  background-color: ivory;
-}
-
-input[type="submit"] {
-  background-color: ivory;
-  margin-top: 20px;
-  padding: 5px;
-  border-radius: 20px;
-  width: 150px;
-  height: 50px;
-  color: black;
-  align-self: center;
-} */
-
-footer {
-  text-align: center;
 }
