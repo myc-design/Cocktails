@@ -1,7 +1,6 @@
  
  
 <section> 
-<!-- <h3>Add Your Favourite Cocktail</h3> -->
   <div class="form-wrapper">
     <form action="cocktail.php" method="POST">
        <fieldset>
@@ -45,14 +44,7 @@
 						  <label for="With a Straw">
 							<input type="radio" id="With a Straw" name="method">With a Straw</label>
           </div>
-            <!-- <select name="method" id="method">
-              <option value="shaken">Shaken not stirred</option>
-              <option value="straw">With a straw</option>
-              <option value="ice">With crushed ice</option>
-              <option value="glass">In a tall glass</option>
-              <option value="umbrella">Cranberry</option>
-            </select> -->
-              <input type="submit" name="submit" value="add your cocktail">
+          <input type="submit" name="submit" value="add your cocktail">
         </div>
        </fieldset>
     </form>
