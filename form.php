@@ -4,18 +4,12 @@
 <?php
 if (isset($_POST['submit'])){
 
-  // echo $_POST['name'];
-  // echo $_POST['alcohol'];
-  // echo $_POST['fruit'];
-  // echo $_POST['mixer'];
-  // echo $_POST['method'];
-
   $db = new PDO('mysql:host=db; dbname=cocktails', 'root', 'password');
 
 
-$name = $_POST['name'];
-$ingredients = $_POST['alcohol'] . $_POST['fruit'] . $_POST['mixer'];
-$method = $_POST['method'];
+  $name = $_POST['name'];
+  $ingredients = $_POST['alcohol'] . ' '. $_POST['fruit'] .' '. $_POST['mixer'];
+  $method = $_POST['method'];
 
 
 $sql = "INSERT INTO `cocktails`(`name`, `ingredients`, `method`) VALUES(:name, :ingredients, :method)";
