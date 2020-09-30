@@ -1,16 +1,36 @@
 
 <?php
-// Step 1: Create a connection
+
+/**
+ * connect to database
+ *
+ * @return instance
+ */
+
+function connectDataBase (){
 $db = new PDO('mysql:host=db; dbname=cocktails', 'root', 'password');
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+return $db;
+}
 
-// Step 2: Prepare a query
-$query = $db->prepare('SELECT * FROM `cocktails`;');
+$db = connectDataBase();
 
-$query->setFetchMode(PDO::FETCH_ASSOC);
+$get = "SELECT * FROM `cocktails`";
 
-// Step 3: Execute the query
+/**
+ * prepare query for database
+ *
+ * @return array
+ */
+
+function prepareQuery($db, $get){
+$query = $db->prepare($get);
 $query->execute();
 $result = $query->fetchAll(); 
+return $result;
+}
+
+ $result = prepareQuery($db, $get);
 
 ?>
 
@@ -18,21 +38,17 @@ $result = $query->fetchAll();
     <div class="cocktail-wrapper">
 
         <?php 
-        
-            foreach($result as $cocktail){
-            echo '<div class="' . 'image-' .$cocktail['id'] . '">';
-
-            echo file_get_contents($cocktail['imagesUrl']) ;    
-            echo '<div class="' . 'image' . '"></div>';
-            echo '<h2>' . $cocktail['name'] . '</h2>';
-            echo '<p class="ingredients">' . $cocktail['ingredients'] . '</p>';
-            echo '<p class="method">' . $cocktail['method'] . '</p>';
-            echo '</div>';
-            
-}
-?>
+             foreach($result as $cocktail){
+                echo '<div class="' . 'image image-' .$cocktail['id'] . '">';
+                echo file_get_contents($cocktail['imagesUrl']) ;    
+               
+                echo '<h2>' . $cocktail['name'] . '</h2>';
+                echo '<p class="ingredients">' . $cocktail['ingredients'] . '</p>';
+                echo '<p class="method">' . $cocktail['method'] . '</p>';
+                echo '<div class="rating">' . $cocktail['rating'] . '</div>';
+                echo '</div>';
+            }
+        ?>
     </div>
-
-
 </section>
 
