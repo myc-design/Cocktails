@@ -44,7 +44,7 @@ $result = prepareQuery($connect, $get);
                 echo '<h2>' . $cocktail['name'] . '</h2>';
                 echo '<p class="ingredients">' . $cocktail['ingredients'] . '</p>';
                 echo '<p class="method">' . $cocktail['method'] . '</p>';
-                echo '<div class="rating">' . $cocktail['rating'] . '</div>';
+                // echo '<div class="rating">' . $cocktail['rating'] . '</div>';
                 echo '</div>';
             }
         ?>

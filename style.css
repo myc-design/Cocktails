@@ -103,12 +103,15 @@ a:hover:after {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 3px solid ivory;
-  /* box-shadow: magenta; */
+  border: 3px solid rgba(229, 229, 134, 0.8);
 }
 
 p.ingredients {
   font-weight: bolder;
+}
+
+p.method {
+  margin: 30px 0px;
 }
 
 .form-wrapper {
