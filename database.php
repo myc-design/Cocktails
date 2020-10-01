@@ -15,7 +15,7 @@ function connectDataBase (){
 
 $connect = connectDataBase();
 
-$get = "SELECT `id`, `name`, `ingredients`,`method`, `imagesUrl` FROM `cocktails`";
+$get = "SELECT `id`, `name`, `ingredients`,`method`, `rating`, `imagesUrl` FROM `cocktails`";
 
 /**
  * prepare query for database
