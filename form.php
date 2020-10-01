@@ -16,6 +16,8 @@ if (isset($_POST['submit'])){
   $stmt->bindParam(':method', $method);
 
   $stmt->execute(['name' => $name, 'ingredients' => $ingredients, 'method' => $method]);
+
+  echo '<h1 class="message">Your cocktail was successfully added!</h1>';
 }
 
 ?>
