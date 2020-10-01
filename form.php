@@ -1,6 +1,3 @@
- <!-- INSERT DATA -->
- 
-
 <?php
 if (isset($_POST['submit'])){
 
@@ -19,14 +16,15 @@ if (isset($_POST['submit'])){
   $stmt->bindParam(':method', $method);
 
   $stmt->execute(['name' => $name, 'ingredients' => $ingredients, 'method' => $method]);
+
+  echo '<h1 class="message">Your cocktail was successfully added!</h1>';
 }
 
 ?>
 
-
 <section> 
   <div class="form-wrapper">
-    <form action="index.php" method="POST">
+    <form action="cocktail.php" method="POST">
        <fieldset>
          <legend>Add Your Favourite Cocktail</legend>
 
