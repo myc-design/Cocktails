@@ -6,16 +6,18 @@ if (isset($_POST['submit'])){
   $name = $_POST['name'];
   $ingredients = $_POST['alcohol'] . ' '. $_POST['fruit'] .' '. $_POST['mixer'];
   $method = $_POST['method'];
+  $rating = $_POST['rate'];
 
-  $sql = "INSERT INTO `cocktails`(`name`, `ingredients`, `method`) VALUES(:name, :ingredients, :method)";
+  $sql = "INSERT INTO `cocktails`(`name`, `ingredients`, `method`, `rating`) VALUES(:name, :ingredients, :method, :rating)";
 
   $stmt = $db->prepare($sql);
 
   $stmt->bindParam(':name', $name);
   $stmt->bindParam(':ingredients', $ingredients); 
   $stmt->bindParam(':method', $method);
+  $stmt->bindParam(':method', $rating);
 
-  $stmt->execute(['name' => $name, 'ingredients' => $ingredients, 'method' => $method]);
+  $stmt->execute(['name' => $name, 'ingredients' => $ingredients, 'method' => $method, 'rating'=>$rating]);
 
   echo '<h1 class="message">Your cocktail was successfully added!</h1>';
 }
@@ -57,6 +59,20 @@ if (isset($_POST['submit'])){
               <option value="Cranberry">Cranberry</option>
               </select>
 
+        <label class="rate">Give your cocktail a ratings: </label>
+            <select name="rate" id="rate">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              </select>
+
         <label class="method">How would you like your cocktail: </label>
           <div id="method" class="radio-button">
               <label for="method">
@@ -66,11 +82,10 @@ if (isset($_POST['submit'])){
 						  <label for="With a Straw">
 							<input type="radio" id="With a Straw" name="method" value="With a Straw">With a Straw</label>
           </div>
-          <input type="submit" name="submit" value="add your cocktail">
+          <input type="submit" name="submit" value="Add your cocktail">
         </div>
        </fieldset>
     </form>
   </div>
 </section>
-
 
