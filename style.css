@@ -16,7 +16,6 @@ h1.message {
   color: white;
   font-size: 3rem;
   background-color: gold;
-  /* background-image: linear-gradient(rgb(255, 255, 255), lightpink); */
   transform: rotate(0deg);
 }
 
@@ -100,7 +99,7 @@ a:hover:after {
   top: 65px;
   content: "rating";
   font-size: 0.8rem;
-  color: green;
+  color: black;
   align-self: end;
   justify-self: start;
 }
@@ -112,7 +111,6 @@ a:hover:after {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* border: 3px solid rgba(229, 229, 134, 0.8); */
 }
 
 p.ingredients {
@@ -173,4 +171,5 @@ input[type="submit"] {
   text-align: center;
   border: none;
   margin: 0 auto;
+  font-weight: bolder;
 }

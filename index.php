@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Inconsolata:wght@600&display=swap" rel="stylesheet">
 </head>
     <body>
          <nav>
