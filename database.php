@@ -56,4 +56,3 @@ $result = prepareQuery($connect, $get);
         ?>
     </div>
 </section>
-

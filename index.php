@@ -16,6 +16,7 @@
        <h1>Cocktail Hour!</h1>
 
    <?php 
+
     include 'database.php';
     ?>
   
