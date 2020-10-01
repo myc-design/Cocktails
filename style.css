@@ -1,0 +1,167 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 20px;
+  padding: 10px;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 5rem;
+  transform: rotate(-5deg);
+  text-align: center;
+}
+
+h2 {
+  padding: 20px 0;
+}
+
+h3 {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  top: 0;
+  padding-top: 18px;
+  height: 60px;
+  font-weight: bold;
+}
+
+a {
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  position: relative;
+}
+
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  top: 25px;
+  content: "";
+  display: block;
+  height: 20px;
+  left: 50%;
+  position: absolute;
+  background: gold;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  z-index: -1;
+}
+
+a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.cocktail-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
+  grid-gap: 30px;
+  text-align: center;
+}
+
+.header-rating {
+  font-weight: bolder;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.rating {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 240, 0.6);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.rating::before {
+  position: absolute;
+  top: 65px;
+  content: "rating";
+  font-size: 0.8rem;
+  color: green;
+  align-self: end;
+  justify-self: start;
+}
+
+.image {
+  padding: 40px;
+  background-image: linear-gradient(rgb(255, 255, 255), lightpink);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 3px solid rgba(229, 229, 134, 0.8); */
+}
+
+p.ingredients {
+  font-weight: bolder;
+}
+
+p.method {
+  margin: 30px 0px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  padding: 20px;
+  border: 1px dotted gray;
+}
+
+legend {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.choose {
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  height: 60px;
+  background-color: white;
+  border: 1px solid grey;
+  display: block;
+  width: 100%;
+}
+
+.input-name {
+  height: 50px;
+  border: 1px solid grey;
+}
+
+label {
+  margin: 30px 0px 5px 0px;
+}
+
+.radio-button {
+  margin: 10px 10px 25px 0px;
+}
+
+input[type="submit"] {
+  border-radius: 20px;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  border: none;
+  margin: 0 auto;
+}
