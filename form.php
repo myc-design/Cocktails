@@ -1,6 +1,3 @@
- <!-- INSERT DATA -->
- 
-
 <?php
 if (isset($_POST['submit'])){
 
@@ -22,7 +19,6 @@ if (isset($_POST['submit'])){
 }
 
 ?>
-
 
 <section> 
   <div class="form-wrapper">
