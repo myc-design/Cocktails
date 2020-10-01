@@ -26,7 +26,7 @@ if (isset($_POST['submit'])){
 
 <section> 
   <div class="form-wrapper">
-    <form action="index.php" method="POST">
+    <form action="cocktail.php" method="POST">
        <fieldset>
          <legend>Add Your Favourite Cocktail</legend>
 
