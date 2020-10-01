@@ -6,29 +6,31 @@ if (isset($_POST['submit'])){
 
   $db = new PDO('mysql:host=db; dbname=cocktails', 'root', 'password');
 
-
   $name = $_POST['name'];
   $ingredients = $_POST['alcohol'] . ' '. $_POST['fruit'] .' '. $_POST['mixer'];
   $method = $_POST['method'];
 
+  $sql = "INSERT INTO `cocktails`(`name`, `ingredients`, `method`) VALUES(:name, :ingredients, :method)";
 
-$sql = "INSERT INTO `cocktails`(`name`, `ingredients`, `method`) VALUES(:name, :ingredients, :method)";
+  $stmt = $db->prepare($sql);
 
-$stmt = $db->prepare($sql);
+  $stmt->bindParam(':name', $name);
+  $stmt->bindParam(':ingredients', $ingredients); 
+  $stmt->bindParam(':method', $method);
 
-$stmt->execute(['name' => $name, 'ingredients' => $ingredients, 'method' => $method]);
-
+  $stmt->execute(['name' => $name, 'ingredients' => $ingredients, 'method' => $method]);
 }
 
 ?>
 
+
 <section> 
   <div class="form-wrapper">
-    <form action="cocktail.php" method="POST">
+    <form action="index.php" method="POST">
        <fieldset>
          <legend>Add Your Favourite Cocktail</legend>
 
-      <div class="choose">
+        <div class="choose">
         <label>Give your cocktail a name: </label>
         <input class="input-name" type="text" name="name">
 

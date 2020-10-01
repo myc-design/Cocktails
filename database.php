@@ -40,11 +40,17 @@ $result = prepareQuery($connect, $get);
         <?php 
              foreach($result as $cocktail){
                 echo '<div class="' . 'image image-' .$cocktail['id'] . '">';
-                echo file_get_contents($cocktail['imagesUrl']) ;    
+
+                if($cocktail['imagesUrl']){
+                    echo file_get_contents($cocktail['imagesUrl']); 
+                } else {
+                    echo file_get_contents('images/mojito.svg');
+                }
+                 
                 echo '<h2>' . $cocktail['name'] . '</h2>';
                 echo '<p class="ingredients">' . $cocktail['ingredients'] . '</p>';
                 echo '<p class="method">' . $cocktail['method'] . '</p>';
-                // echo '<div class="rating">' . $cocktail['rating'] . '</div>';
+                echo '<div class="rating">' . $cocktail['rating'] . '</div>';
                 echo '</div>';
             }
         ?>
